@@ -37,11 +37,11 @@ public class Program {
                 if (capturedPiece != null) {
                     captured.add(capturedPiece);
                 }
-                
+
             } catch (InputMismatchException e) {
                 System.out.println(e.getMessage());
                 scanner.nextLine();
-            }catch(ChessException e ){
+            } catch (ChessException e) {
                 System.out.println(e.getMessage());
                 scanner.nextLine();
             }
