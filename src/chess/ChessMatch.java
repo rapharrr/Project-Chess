@@ -90,7 +90,7 @@ public class ChessMatch {
         throw new IllegalStateException("There is no " + color + " king on the board");
     }
 
-    private boolean testCheck(Color color) {
+    private boolean isCheck(Color color) {
         Position kingPosition = king(color).getChessPosition().toPosition();
         List<Piece> opponentPieces = piecesOnTheBoard.stream()
                 .filter(x -> ((ChessPiece) x).getColor() == opponentColor(color)).collect(Collectors.toList());
@@ -103,8 +103,8 @@ public class ChessMatch {
         return false;
     }
 
-    private boolean testCheckmate(Color color) {
-        if (!testCheck(color)) {
+    private boolean isCheckMate(Color color) {
+        if (!isCheck(color)) {
             return false;
         }
         List<Piece> list = piecesOnTheBoard.stream().filter(x -> ((ChessPiece) x).getColor() == color)
@@ -117,9 +117,9 @@ public class ChessMatch {
                         Position source = ((ChessPiece) p).getChessPosition().toPosition();
                         Position target = new Position(i, j);
                         Piece capturedPiece = makeMove(source, target);
-                        boolean testCheck = testCheck(color);
+                        boolean isCheck = isCheck(color);
                         undoMove(source, target, capturedPiece);
-                        if (!testCheck) {
+                        if (!isCheck) {
                             return false;
                         }
                     }
@@ -141,7 +141,7 @@ public class ChessMatch {
         validateSourcePosition(source);
         validateTargetPosition(source, target);
         Piece capturedPiece = makeMove(source, target);
-        if (testCheck(currentPlayerColor)) {
+        if (isCheck(currentPlayerColor)) {
             undoMove(source, target, capturedPiece);
             throw new ChessException("you cant put yourself in check.");
         }
@@ -156,9 +156,9 @@ public class ChessMatch {
 			}
 		}
 
-        check = (testCheck(opponentColor(currentPlayerColor))) ? true : false;
+        check = (isCheck(opponentColor(currentPlayerColor))) ? true : false;
 
-        if (testCheckmate(opponentColor(currentPlayerColor))) {
+        if (isCheckMate(opponentColor(currentPlayerColor))) {
             checkMate = true;
         } else {
             nextTurn();

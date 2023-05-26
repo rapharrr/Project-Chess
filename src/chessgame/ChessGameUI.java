@@ -1,4 +1,4 @@
-package application;
+package chessgame;
 
 import java.util.Arrays;
 import java.util.InputMismatchException;
@@ -11,7 +11,7 @@ import chess.ChessPiece;
 import chess.ChessPosition;
 import chess.Color;
 
-public class UI {
+public class ChessGameUI {
 
     // https://stackoverflow.com/questions/5762491/how-to-print-color-in-console-using-system-out-println
 
