@@ -67,11 +67,9 @@ Se você estiver interessado em contribuir para o projeto de Xadrez em Java, aqu
 
 2. **Inteligência Artificial (IA):** Se você tem conhecimento em IA, pode contribuir implementando uma IA para jogar contra os jogadores humanos. Você pode explorar algoritmos de busca, como Minimax ou Alpha-Beta Pruning, para desenvolver uma IA que faça movimentos estratégicos.
 
-3. **Melhorias nas Funcionalidades:** Você pode aprimorar as funcionalidades existentes do projeto, como adicionar suporte a movimentos especiais, como o roque, ou implementar regras adicionais, como empate por repetição. Além disso, você pode otimizar o código, melhorar a detecção de erros e a validação de movimentos.
+3. **Testes e Depuração:** Contribua realizando testes extensivos no projeto, identificando e corrigindo possíveis bugs ou erros de lógica. Isso garantirá que o projeto esteja robusto e funcione corretamente em diferentes cenários de jogo.
 
-4. **Testes e Depuração:** Contribua realizando testes extensivos no projeto, identificando e corrigindo possíveis bugs ou erros de lógica. Isso garantirá que o projeto esteja robusto e funcione corretamente em diferentes cenários de jogo.
-
-5. **Documentação:** Ajude a melhorar a documentação do projeto, adicionando comentários no código, escrevendo guias de uso ou atualizando o Readme. Isso facilitará a compreensão do projeto para outros desenvolvedores e usuários interessados.
+4. **Documentação:** Ajude a melhorar a documentação do projeto, adicionando comentários no código, escrevendo guias de uso ou atualizando o Readme. Isso facilitará a compreensão do projeto para outros desenvolvedores e usuários interessados.
 
 ## Licença
 
